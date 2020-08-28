@@ -21,6 +21,14 @@ const Home = () => {
                                 Relate seu problema
                             </strong>
                         </Link>
+                        <Link to="/show-problems">
+                            <span>
+                                <FiLogIn />
+                            </span>
+                            <strong>
+                                Listar todos os problemas
+                            </strong>
+                        </Link>
                 </main>
             </div>
         </div>

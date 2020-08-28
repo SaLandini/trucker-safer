@@ -1,7 +1,7 @@
 import {Request, Response} from 'express'
 import knex from '../database/connection'
 
-class ProblemsController {
+class ProblemsControllers {
     async index(request: Request, response: Response){
         const { city, uf, items } = request.query
 
@@ -86,4 +86,4 @@ class ProblemsController {
     }
 }
 
-export default ProblemsController
+export default ProblemsControllers

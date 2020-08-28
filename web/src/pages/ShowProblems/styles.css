@@ -1,0 +1,13 @@
+    #page-show-problems{
+        padding: 32px;
+        padding-top: 32px;
+    }
+
+    #page-show-problems ul{
+        list-style-type: none;
+    }
+
+    #page-show-problems ul li{
+        display: inline;
+        padding: 32px;
+    }

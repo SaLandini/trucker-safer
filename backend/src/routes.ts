@@ -2,10 +2,12 @@ import express from 'express'
 
 import ProblemsController from './controllers/ProblemsControllers'
 import ItemsController from './controllers/ItemsControllers'
- 
+import AuthController from './controllers/AuthControllers' 
+
 const routes = express.Router()
 const problemsController = new ProblemsController()
 const itemsController = new ItemsController()
+const authController = new AuthController()
 
 routes.get('/items', itemsController.index)
 
