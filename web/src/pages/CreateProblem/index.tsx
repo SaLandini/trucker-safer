@@ -26,7 +26,7 @@ interface IBGECityResponse{
 
 Modal.setAppElement('#root')
 
-const CreatePoint = () => {
+const CreateProblem = () => {
 
     const [items, setItems] = useState<Item[]>([])
     const [ufs, setUfs] = useState<string[]>([])
@@ -146,7 +146,7 @@ const CreatePoint = () => {
             description
         }
 
-       await api.post('points', data)
+       await api.post('problems', data)
 
        alert('Problema enviado!')
 
@@ -154,7 +154,7 @@ const CreatePoint = () => {
     }
 
     return (
-        <div id="page-create-point">
+        <div id="page-create-problem">
             <header>
                 <Link to="/">
                     <FiArrowLeft /> Voltar para Home
@@ -278,4 +278,4 @@ const CreatePoint = () => {
         </div>
     )
 }
-export default CreatePoint
+export default CreateProblem

@@ -1,7 +1,7 @@
 import {Request, Response} from 'express'
 import knex from '../database/connection'
 
-class PointsController {
+class ProblemsController {
     async index(request: Request, response: Response){
         const { city, uf, items } = request.query
 
@@ -9,32 +9,32 @@ class PointsController {
         .split(',')
         .map(item => Number(item.trim()))
 
-        const points = await knex('points')
-        .join('points_items', 'point_id', '=', 'points_items.point_id')
-        .whereIn('points_items.item_id', parsedItens)
+        const problems = await knex('problem')
+        .join('problems_items', 'problems_id', '=', 'problems_items.problem_id')
+        .whereIn('problems_items.item_id', parsedItens)
         .where('city', String(city))
         .where('uf', String(uf))
         .distinct()
-        .select('points.*')
+        .select('problems.*')
 
-        return response.json(points)
+        return response.json(problems)
     }
 
     async show(request: Request, response: Response){
         const { id } = request.params
 
-        const point = await knex('points').where('id', id).first()
+        const problem = await knex('problems').where('id', id).first()
 
-        if (!point) {
-            return response.status(400).json({ message: 'ERROR: Point not found' })
+        if (!problem) {
+            return response.status(400).json({ message: 'ERROR: Problems not found' })
         }
         
         const items = await knex('items')
-        .join('points_items', 'items.id', '=', 'points_items.item_id')
-        .where('points_items.point_id', id)
+        .join('problems_items', 'items.id', '=', 'problems_items.item_id')
+        .where('problems_items.problem_id', id)
         .select('items.title')
 
-        return response.json({ point, items })
+        return response.json({ problem, items })
     }
     
     async create(request: Request, response: Response){
@@ -52,7 +52,7 @@ class PointsController {
     
         const trx = await knex.transaction()
     
-        const point = {
+        const problem = {
             image: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=600-fake',
             name,
             truck,
@@ -64,26 +64,26 @@ class PointsController {
             description
         }
 
-        const insertedIds = await trx('points').insert(point)
+        const insertedIds = await trx('problems').insert(problem)
     
-        const point_id = insertedIds[0]
+        const problem_id = insertedIds[0]
     
-        const pointItems = items.map((item_id: number) => {
+        const problemItems = items.map((item_id: number) => {
             return {
                 item_id,
-                point_id,
+                problem_id,
             }
         })
     
-        await trx('points_items').insert(pointItems)
+        await trx('problems_items').insert(problemItems)
 
         await trx.commit()
     
         return response.json({
-            id: point_id,
-            ... point,
+            id: problem_id,
+            ... problem,
         })
     }
 }
 
-export default PointsController
+export default ProblemsController
