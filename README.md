@@ -53,6 +53,6 @@ Essa aplicação só esta podendo ser realizada através de meus estudos tanto e
 pela [Rocketseat](https://github.com/Rocketseat) em seus projetos como a antiga **Semana OmniStack** e a atual 
 **Next Level Week** mas sem dúvidas alguma por um amigo onde ajudou com algumas falhas e melhorias no código [Denner](https://github.com/dennervidal)
 
-![Linus](https://media.giphy.com/media/xndHaRIcvge5y/source.gifraw=true)
+![Linus](https://media.giphy.com/media/xndHaRIcvge5y/source.gif)
 > Se a Microsoft faz aplicações para Linux, significa que eu ganhei. -Linus Torvalds
 
