@@ -55,5 +55,5 @@ pela [Rocketseat](https://github.com/Rocketseat) em seus projetos como a antiga 
 - [x] Ainda em desenvolvimento
 
 
-> Se a Microsoft faz aplicações para Linux, significa que eu ganhei. -Linus Torvalds
 ![Linus](https://media.giphy.com/media/xndHaRIcvge5y/source.gif)
+> Se a Microsoft faz aplicações para Linux, significa que eu ganhei. -Linus Torvalds
