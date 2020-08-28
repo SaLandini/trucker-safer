@@ -52,6 +52,18 @@ pela [Rocketseat](https://github.com/Rocketseat) em seus projetos como a antiga 
 **Next Level Week** mas sem dúvidas alguma por um amigo onde ajudou com algumas falhas e melhorias no código [Denner](https://github.com/dennervidal)
 
 
+## Como contribuir?
+
+
+1. Realize um Fork do projeto
+2. Crie um branch com a nova feature
+3. Realize o Commit
+4. Realize o Push no Branch
+5. Abra um Pull Request
+
+# Autores
+
+[**Murilo Barbosa**](https://github.com/murilobarbosa2002)
 - [x] Ainda em desenvolvimento
 
 
