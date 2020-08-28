@@ -8,9 +8,7 @@ A aplicação Trucker Safer é uma aplicação bem simples e intuitiva, cujo seu
 utilizada por empresas que trabalham no ramo de mecânica de caminhões.
 
 
-Onde essa respectiva empresa irá passar essa aplicação (que ainda está em estado de desenvolvimento de uma versão 
-para computadores onde essa versão não será utilizada pelos usuários, e sim, somente pela empresa, 
-já a versão que o usuário irá utlizar será uma versão mobile que ainda será desenvolvida.) para os usuários, que 
+Onde essa respectiva empresa irá passar essa aplicação para os usuários, que 
 provavelmente será os caminhoneiros, eles irão estar com a versão mobile em seus Smartphones, onde será possivel 
 realizar um cadrastro e login, e preencher um formulário caso aconteça algum emprevisto em seus caminhões, neste 
 formulário será armazenado as informações como Nome, Modelo do caminhão, Número de telefone, UF(Unidade Federativa)
@@ -53,6 +51,9 @@ Essa aplicação só esta podendo ser realizada através de meus estudos tanto e
 pela [Rocketseat](https://github.com/Rocketseat) em seus projetos como a antiga **Semana OmniStack** e a atual 
 **Next Level Week** mas sem dúvidas alguma por um amigo onde ajudou com algumas falhas e melhorias no código [Denner](https://github.com/dennervidal)
 
-![Linus](https://media.giphy.com/media/xndHaRIcvge5y/source.gif)
-> Se a Microsoft faz aplicações para Linux, significa que eu ganhei. -Linus Torvalds
 
+- [x] Ainda em desenvolvimento
+
+
+> Se a Microsoft faz aplicações para Linux, significa que eu ganhei. -Linus Torvalds
+![Linus](https://media.giphy.com/media/xndHaRIcvge5y/source.gif)
