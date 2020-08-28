@@ -48,8 +48,8 @@ As tecnologias que escolhi para realizar essa aplicação foram:
 
 
 Essa aplicação só esta podendo ser realizada através de meus estudos tanto em cursos onlines mas óbviamente
-pela [Rocketseat](https://github.com/Rocketseat) em seus projetos como a antiga **Semana OmniStack** e a atual 
-**Next Level Week** mas sem dúvidas alguma por um amigo onde ajudou com algumas falhas e melhorias no código [Denner](https://github.com/dennervidal)
+pela [**Rocketseat**](https://github.com/Rocketseat) em seus projetos como a antiga **Semana OmniStack** e a atual 
+**Next Level Week** mas sem dúvidas alguma por um amigo onde ajudou com algumas falhas e melhorias no código [**Denner**](https://github.com/dennervidal)
 
 
 ## Como contribuir?
@@ -63,7 +63,7 @@ pela [Rocketseat](https://github.com/Rocketseat) em seus projetos como a antiga 
 
 # Autores
 
-[**Murilo Barbosa**](https://github.com/murilobarbosa2002)
+[**Murilo Barbosa**](https://github.com/murilobarbosa2002) - [**Perfil no LinkedIn**](https://www.linkedin.com/in/murilo-barbosa-81a879182)
 - [x] Ainda em desenvolvimento
 
 
