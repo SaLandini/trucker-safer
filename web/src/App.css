@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #34CB79;
+    --primary-color: #031f36c0;
     --title-color: #322153;
-    --text-color: #6C6C80;
+    --text-color: #2c2c30;
   }
   
   * {
@@ -17,11 +17,13 @@
   }
   
   body, input, button {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
     color: var(--title-color);
-    font-family: Ubuntu;
+    font-family: 'Oswald', sans-serif;
   }
-  
+  p {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
