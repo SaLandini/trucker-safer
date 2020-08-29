@@ -64,6 +64,8 @@ pela [**Rocketseat**](https://github.com/Rocketseat) em seus projetos como a ant
 # Autores
 
 [**Murilo Barbosa**](https://github.com/murilobarbosa2002) - [**Perfil no LinkedIn**](https://www.linkedin.com/in/murilo-barbosa-81a879182)
+[**Rafael Salandin**](https://github.com/SaLandini) - [**Perfil no LinkedIn**](https://www.linkedin.com/in/rafael-salandin-moraes-942b81173/)
+
 - [x] Ainda em desenvolvimento
 
 
