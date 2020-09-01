@@ -1,3 +1,4 @@
+
 #page-home {
     height: 100vh;  
   }
@@ -8,7 +9,7 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 30px;
-  
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -21,10 +22,17 @@
   #page-home .content main {
     flex: 1;
     max-width: 560px;
-  
+    background: #fffffff5;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 48px;
+    border-radius: 20px;
+    align-self: center;
+    width: 600px;
+    height: 500px;
+    text-align: center;
+    align-items: center;
   }
   
   #page-home .content main h1 {
@@ -78,7 +86,7 @@
   }
   
   #page-home .content main a:hover {
-    background: #2FB86E;
+    background: #000407c0;
   }
 
   #page-home ul li{

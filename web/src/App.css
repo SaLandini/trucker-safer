@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #34CB79;
+    --primary-color: #031f36c0;
     --title-color: #322153;
-    --text-color: #6C6C80;
+    --text-color: #2c2c30;
   }
   
   * {
@@ -17,14 +17,25 @@
   }
   
   body, input, button {
+<<<<<<< HEAD
     font-family: Noto, Arial, Helvetica, sans-serif;
+=======
+    font-family: 'Noto Sans KR', sans-serif;
+>>>>>>> 84c01f6f92d8b4ee1a3a941df3af3600a1b14512
   }
   
   h1, h2, h3, h4, h5, h6 {
     color: var(--title-color);
+<<<<<<< HEAD
     font-family: Ubuntu, Oswald;
   }
   
   p {
     font-family: 'Noto', Arial, Helvetica, sans-serif;
+=======
+    font-family: 'Oswald', sans-serif;
+  }
+  p {
+    font-family: 'Noto Sans KR', sans-serif;
+>>>>>>> 84c01f6f92d8b4ee1a3a941df3af3600a1b14512
   }
