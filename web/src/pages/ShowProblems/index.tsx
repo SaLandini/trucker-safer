@@ -4,6 +4,7 @@ import api from '../../services/api'
 
 
 interface Data {
+    id: number
     name: string
     truck: string
     whatsapp: string
@@ -17,11 +18,11 @@ interface Data {
 
 const ShowProblems = () =>{
     
-    const [formData, setFormData] = useState<Data[]>([])
+    const [responseProblems, setResponseProblems] = useState<Data[]>([])
 
     useEffect(() => {
-        api.get('/problems').then(response => {
-            setFormData(response.data)
+        api.get('problems').then(response => {
+            setResponseProblems(response.data)
         })
         }, [])
         
@@ -35,18 +36,18 @@ const ShowProblems = () =>{
                     <div className="problems-content">
                     <li>
                     {
-                        formData.map(problems => (
-                            <div className="data">
+                        responseProblems.map(problem => (
+                            <div key={problem.id} className="data">
                                 <h3>Modelo Do Caminhão</h3>
-                                <p>{problems.truck}</p>
+                                <p>{problem.truck}</p>
                                 <h3>Whatsapp</h3>
-                                <p>{problems.whatsapp}</p>
+                                <p>{problem.whatsapp}</p>
                                 <h3>Cidade e Estado (UF)</h3>
-                                <p>{problems.city} - {problems.uf}</p>
+                                <p>{problem.city} - {problem.uf}</p>
                                 <h3>Ítens selecionados</h3>
-                                <p>{problems.items}</p>
+                                <p>{problem.items}</p>
                                 <h3>Descrição</h3>
-                                <p>{problems.description}</p>
+                                <p>{problem.description}</p>
                             </div>
                         ))
                     }

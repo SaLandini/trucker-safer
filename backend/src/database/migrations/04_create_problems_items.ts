@@ -4,7 +4,7 @@ export async function up(knex: Knex) {
     return knex.schema.createTable('problems_items', table => {
         table.increments('id').primary()
 
-        table.integer('problem_id')
+        table.integer('problems_id')
         .notNullable()
         .references('id')
         .inTable('problems')

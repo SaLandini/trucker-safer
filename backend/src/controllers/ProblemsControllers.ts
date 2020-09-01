@@ -3,38 +3,53 @@ import knex from '../database/connection'
 
 class ProblemsControllers {
     async index(request: Request, response: Response){
-        const { city, uf, items } = request.query
+       // const { city, uf, items } = request.query
 
-        const parsedItens = String(items)
-        .split(',')
-        .map(item => Number(item.trim()))
+       // const parsedItens = String(items)
+       // .split(',')
+       // .map(item => Number(item.trim()))
 
-        const problems = await knex('problem')
-        .join('problems_items', 'problems_id', '=', 'problems_items.problem_id')
-        .whereIn('problems_items.item_id', parsedItens)
-        .where('city', String(city))
-        .where('uf', String(uf))
-        .distinct()
-        .select('problems.*')
+       // const problems = await knex('problems')
+        //.join('problems_items', 'problems_id', '=', 'problems_items.problems_id')
+        //.whereIn('problems_items.item_id', parsedItens)
+        //.where('city', String(city))
+        //.where('uf', String(uf))
+        //.distinct()
+        //.select('problems.*')
 
-        return response.json(problems)
+        const problems =  await knex('problems').select('*')
+
+       
+        const serializedProblems = problems.map(problem => {
+            return {
+                id: problem.id,
+                name: problem.name,
+                truck: problem.truck,
+                whatsapp: problem.whatsapp,
+                uf: problem.uf,
+                city: problem.city,
+                description: problem.description,
+            }
+        })
+
+        return response.json(serializedProblems)
     }
 
     async show(request: Request, response: Response){
         const { id } = request.params
 
-        const problem = await knex('problems').where('id', id).first()
+        const problems = await knex('problems').where('id', id).first()
 
-        if (!problem) {
+        if (!problems) {
             return response.status(400).json({ message: 'ERROR: Problems not found' })
         }
         
         const items = await knex('items')
         .join('problems_items', 'items.id', '=', 'problems_items.item_id')
-        .where('problems_items.problem_id', id)
+        .where('problems_items.problems_id', id)
         .select('items.title')
 
-        return response.json({ problem, items })
+        return response.json({ problems, items })
     }
     
     async create(request: Request, response: Response){
@@ -52,7 +67,7 @@ class ProblemsControllers {
     
         const trx = await knex.transaction()
     
-        const problem = {
+        const problems = {
             image: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=600-fake',
             name,
             truck,
@@ -64,24 +79,24 @@ class ProblemsControllers {
             description
         }
 
-        const insertedIds = await trx('problems').insert(problem)
+        const insertedIds = await trx('problems').insert(problems)
     
-        const problem_id = insertedIds[0]
+        const problems_id = insertedIds[0]
     
-        const problemItems = items.map((item_id: number) => {
+        const problemsItems = items.map((item_id: number) => {
             return {
                 item_id,
-                problem_id,
+                problems_id,
             }
         })
     
-        await trx('problems_items').insert(problemItems)
+        await trx('problems_items').insert(problemsItems)
 
         await trx.commit()
     
         return response.json({
-            id: problem_id,
-            ... problem,
+            id: problems_id,
+            ... problems,
         })
     }
 }
