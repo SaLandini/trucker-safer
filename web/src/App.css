@@ -17,13 +17,15 @@
   }
   
   body, input, button {
+    font-family: 'Noto', Arial, Helvetica, sans-serif;
     font-family: 'Noto Sans KR', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
     color: var(--title-color);
-    font-family: 'Oswald', sans-serif;
+    font-family: Ubuntu, Oswald;
   }
-  p {
-    font-family: 'Noto Sans KR', sans-serif;
+
+  p{
+    font-family: 'Noto',Arial, Helvetica, sans-serif;
   }
