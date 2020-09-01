@@ -11,7 +11,7 @@ const Home = () => {
                 <header>
                 </header>
                 <main>
-                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <h1>TRUCK SAFER</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dicta minima aliquid.</p> 
                         <Link to="/create-problem">
                             <span>

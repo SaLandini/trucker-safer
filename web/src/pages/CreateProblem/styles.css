@@ -118,6 +118,7 @@
   
   #page-create-problem form .field-group .field + .field {
     margin-left: 24px;
+    width: 150px;
   }
   
   #page-create-problem form .field-group input + input {
@@ -237,7 +238,7 @@
   }
 
   .Modal legend h1{
-    font-family: 'Roboto';
+    font-family: 'Noto';
     font-size: 22px;
   }
   

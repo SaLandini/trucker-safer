@@ -1,13 +1,62 @@
-    #page-show-problems{
+    #page-show-problems {
         padding: 32px;
         padding-top: 32px;
     }
 
-    #page-show-problems ul{
+    #page-show-problems ul {
         list-style-type: none;
     }
 
-    #page-show-problems ul li{
+    #page-show-problems ul li {
         display: inline;
         padding: 32px;
+    }
+
+    #page-show-problems ul div.problems-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        list-style: none;
+    }
+    
+    #page-show-problems li {
+        background: #f5f5f5;
+        border: 2px solid #f5f5f5;
+        height: 400px;
+        border-radius: 8px;
+        padding: 32px 24px 16px;
+  
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        cursor: pointer;
+    }
+
+    #page-show-problems .legend-title {
+        font-family: 'Oswald'; 
+        text-align: center;
+        padding: 16px;
+        color: #322153;
+    }
+
+    #page-show-problems h2 {
+        text-align: center;
+        color: #322153;
+        font-family: 'oswald';
+        font-size: 18px;
+    }
+    
+    #page-show-problems .data {
+        text-align: left;
+        font-family: 'Noto';
+        
+        position: absolute;
+        padding-top: 32px;
+        left: 45px
+    }
+
+    #page-show-problems .data p{
+        padding: 4px;
     }
